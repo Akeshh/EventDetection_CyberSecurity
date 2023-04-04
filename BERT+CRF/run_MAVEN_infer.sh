@@ -1,9 +1,9 @@
 python3 run_maven.py \
-    --data_dir ../maven/ge11 \ #path to the test data, remember to delete the cached files at first (otherwise the test data may be random shuffled before)
+    --data_dir ../Data/ \ #path to the test data, remember to delete the cached files at first (otherwise the test data may be random shuffled before)
     --model_type bertcrf \
-    --model_name_or_path microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext \
-    --output_dir ./MAVEN/checkpoint-900 \ #path to the trained checkpoint, the results file will also be dumped here
-    --max_seq_length 512 \
+    --model_name_or_path bert-base-uncased \
+    --output_dir ./MAVEN/checkpoint-450 \ #path to the trained checkpoint, the results file will also be dumped here
+    --max_seq_length 256 \
     --do_lower_case \
     --per_gpu_train_batch_size 16 \
     --per_gpu_eval_batch_size 16 \
@@ -13,4 +13,5 @@ python3 run_maven.py \
     --save_steps 100 \
     --logging_steps 100 \
     --seed 0 \
-    --do_infer #add this flag to do inference only
+    --do_infer \ #add this flag to do inference only
+    --overwrite_output_dir
