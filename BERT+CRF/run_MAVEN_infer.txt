@@ -1,0 +1,17 @@
+python run_maven.py ^
+    --data_dir ../Data/ ^
+    --model_type bertcrf ^
+    --model_name_or_path bert-base-uncased ^
+    --output_dir ./output/checkpoint-450 ^
+    --max_seq_length 256 ^
+    --do_lower_case ^
+    --per_gpu_train_batch_size 16 ^
+    --per_gpu_eval_batch_size 16 ^
+    --gradient_accumulation_steps 16 ^
+    --learning_rate 5e-5 ^
+    --num_train_epochs 50 ^
+    --save_steps 50 ^
+    --logging_steps 50 ^
+    --seed 0 ^
+    --do_infer ^
+    --overwrite_output_dir
