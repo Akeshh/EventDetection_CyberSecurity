@@ -2,7 +2,7 @@ python3 run_maven.py \
     --data_dir ../Data/ \ #path to the test data, remember to delete the cached files at first (otherwise the test data may be random shuffled before)
     --model_type bertcrf \
     --model_name_or_path bert-base-uncased \
-    --output_dir ./MAVEN/checkpoint-450 \ #path to the trained checkpoint, the results file will also be dumped here
+    --output_dir ./output/checkpoint-450 \ #path to the trained checkpoint, the results file will also be dumped here
     --max_seq_length 256 \
     --do_lower_case \
     --per_gpu_train_batch_size 16 \
