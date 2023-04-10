@@ -161,9 +161,9 @@ def train(args, train_dataset, model, tokenizer, labels, pad_token_label_id):
     model.zero_grad()
     train_iterator = trange(int(args.num_train_epochs), desc="Epoch", disable=args.local_rank not in [-1, 0])
     set_seed(args)  # Added here for reproductibility (even between python 2 and 3)
+    best_test_f1 = 0.0
     for _ in train_iterator:
         epoch_iterator = tqdm(train_dataloader, desc="Iteration", disable=args.local_rank not in [-1, 0])
-        best_test_f1 = 0
         for step, batch in enumerate(epoch_iterator):
             model.train()
             batch = tuple(t.to(args.device) for t in batch)
@@ -214,7 +214,7 @@ def train(args, train_dataset, model, tokenizer, labels, pad_token_label_id):
                         #else :
                             #best_dev_f1=results['f1']
                         result_t, _ = evaluate(args, model, tokenizer, labels, pad_token_label_id, mode="dev",prefix="dev," + str(global_step))
-                        if result_t['f1']>best_dev_f1:
+                        if result_t['f1']>best_test_f1:
                             best_test_f1=result_t['f1']
                             _will_save = True
                             _best_step = str(global_step)
