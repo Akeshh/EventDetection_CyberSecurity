@@ -34,3 +34,21 @@ You can add codes in bert_TokenClassification.py to change model architecture.
 
 See the two scripts for more details.
 
+## Usable Pretrained Language Model (PLM)
+### BERT:
+- bert-base-uncased
+
+- allenai/scibert_scivocab_uncased
+
+- "../NewsBERT/"
+
+### RoBERTa:
+- "../roberta-base/"
+
+- "../roberta-large/"
+
+- "../SecRoBERTa/"
+
+Models in " " mean that you need to upload the PLMs from local
+
+change --model_type roberta and --model_name_or_path to use different PLM 
