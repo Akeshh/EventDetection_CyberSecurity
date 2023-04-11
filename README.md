@@ -1,5 +1,5 @@
 # EventDetection_CyberSecurity
-Event Detection Baselines for CASIE  CyberSecurity dataset in MAVEN format. We would use the BERT-CRF model for developing.
+Event Detection Baselines for CASIE  CyberSecurity dataset in MAVEN format. We would use the Transformer based models for developing.
 
 ## Data
 The training set, development set, and testing set are stored in the MAVEN format in the **.jsonl** files and are located in the **Data** folder. Prior to training, it is necessary to  **unzip the train.zip** to obtain the train.jsonl.
