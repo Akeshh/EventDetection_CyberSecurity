@@ -1,0 +1,19 @@
+python3 run_maven.py \
+    --data_dir ../Data/ \ #path to the raw MAVEN data files
+    --model_type bert \
+    --model_name_or_path bert-base-uncased \
+    --output_dir ./output \ #path to dump checkpoints
+    --max_seq_length 256 \
+    --do_lower_case \
+    --per_gpu_train_batch_size 16 \
+    --per_gpu_eval_batch_size 16 \
+    --gradient_accumulation_steps 8 \
+    --learning_rate 5e-5 \
+    --num_train_epochs 20 \
+    --save_steps 50 \
+    --logging_steps 50 \
+    --seed 0 \
+    --do_train \
+    --do_eval \
+    --evaluate_during_training \
+    --overwrite_output_dir
