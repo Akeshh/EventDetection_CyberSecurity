@@ -52,4 +52,4 @@ Before you use RoBERTa, you should update your `run_maven.py` in BERT folder, th
 
 Models in " " mean that you need to upload the PLMs from local
 
-change --model_type e.g., <roberta> and --model_name_or_path e.g., <"../SecRoBERTa/"> to use different PLMs.
+change --model_type e.g., `roberta` and --model_name_or_path e.g., `"../SecRoBERTa/"` to use different PLMs.
