@@ -34,7 +34,7 @@ You can add codes in bert_TokenClassification.py to change model architecture.
 
 See the two scripts for more details.
 
-## Usable Pretrained Language Model (PLM)
+## Change Pretrained Language Model (PLM)
 Before you use RoBERTa, you should update your `run_maven.py` in BERT folder, the latest version of `run_maven.py` is updated at 11/4/2023 23:00
 ### BERT:
 - bert-base-uncased
