@@ -25,4 +25,12 @@ Hint: ./output/ is the folder sroring your model checkpoints.
 
 See the two scripts for more details.
 
+##Change model architecture
+The method for changing model architecture is based on classifier.
+###Use CRF as classifier
+You can add codes in bert_crf.py to change model architecture.
+###Use FFNN as classifier
+You can add codes in bert_TokenClassification.py to change model architecture.
+
+See the two scripts for more details.
 
